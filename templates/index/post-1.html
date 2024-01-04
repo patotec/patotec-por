@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body class="home-1-bg">
+
+   
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== POST LAYOUT 1 PART START ======-->
+
+    <section class="post-layout-1-area pb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-author-content">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="./">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Worldnews</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Health</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="post-layout-top-content">
+                        <div class="post-categories d-flex justify-content-between align-content-center">
+                            <div class="categories-item">
+                                <span>{{data.catagories}}</span>
+                            </div>
+                            <!-- <div class="categories-share">
+                                <ul>
+                                    <li><i class="fas fa-comment"></i>45020</li>
+                                    <li><i class="fas fa-fire"></i>45020</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                        <div class="post-content">
+                            <h3 class="title">{{data.title}}</h3>
+                           
+                            <div class="thumb">
+                                <img src="{{data.image.url}}" alt="">
+                            </div>
+                        </div>
+                        <div class="post-author">
+                            <div class="author-info">
+                                <div class="thumb">
+                                    <img src="assets/images/author.png" alt="">
+                                </div>
+                                <h5 class="title">By:Admin</h5>
+                                <ul>
+                                    <li>{{data.created_at}}</li>
+                                   
+                                </ul>
+                            </div>
+                            <div class="author-social">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fal fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fal fa-bookmark"></i></a></li>
+                                    <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="post-text mt-30">
+                           <p>{{data.detail}}</p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="post_gallery_sidebar mt-40">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">TRENDY</a>
+                            </li>
+                           
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="post_gallery_items">
+                                    {% for i in num %}
+                                    <div class="gallery_item">
+                                        <div class="gallery_item_thumb">
+                                            <img src="{{i.image.url}}" alt="gallery">
+                                        </div>
+                                        <div class="gallery_item_content">
+                                            <div class="post-meta">
+                                                <div class="meta-categories">
+                                                    <a href="#">{{i.catagories}}</a>
+                                                </div>
+                                                <div class="meta-date">
+                                                    <span>{{i.created_at}}</span>
+                                                </div>
+                                            </div>
+                                            <h4 class="title"><a href="#">{{i.title}}</a></h4>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                  
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="trending-social mt-30">
+                            <div class="section-title">
+                                <h3 class="title">Follow us</h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <span>34,456</span>
+                                        <p>Fans</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-2" href="#">
+                                        <i class="fab fa-twitter"></i>
+                                        <span>34,456</span>
+                                        <p>Followers</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-3" href="#">
+                                        <i class="fab fa-youtube"></i>
+                                        <span>34,456</span>
+                                        <p>Subscribers</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a class="item-4" href="#">
+                                        <i class="fab fa-instagram"></i>
+                                        <span>34,456</span>
+                                        <p>Followers</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-5" href="#">
+                                        <i class="fab fa-vimeo-v"></i>
+                                        <span>34,456</span>
+                                        <p>Followers</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-6" href="#">
+                                        <i class="fab fa-maxcdn"></i>
+                                        <span>34,456</span>
+                                        <p>Fans</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="trending-sidebar mt-40">
+                            <div class="section-title">
+                                <h3 class="title">Adverts</h3>
+                            </div>
+                            <div class="row trending-sidebar-slider">
+                                {% for i in  ads %}
+                                <div class="col-lg-6">
+                                    <div class="trending-news-item">
+                                        <div class="trending-news-thumb">
+                                            <img src="{{i.image.url}}" alt="trending">
+                                            <div class="icon">
+                                                <a href="#"><i class="fas fa-bolt"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="trending-news-content">
+                                            <div class="post-meta">
+                                                <div class="meta-categories">
+                                                    <a href="#">{{i.email}}</a>
+                                                </div>
+                                                <div class="meta-date">
+                                                    <span>{{i.created_at}}</span>
+                                                </div>
+                                            </div>
+                                            <h3 class="title"><a href="{{i.contact}}">{{i.name}}</a></h3>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                              
+                            </div>
+                           
+                        </div>
+                        <div class="sidebar-add pt-40">
+                            <a href="#"><img src="/static/assets/images/logo.png" alt="ad"></a>
+                        </div>
+
+                     
+                       
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== POST LAYOUT 1 PART ENDS ======-->
+
+    <!--====== LATEST NEWS PART START ======-->
+
+  
+
+    <!--====== LATEST NEWS PART ENDS ======-->
+    
+    <!--====== POST FORM PART START ======-->
+
+    <div class="post-form-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-title">
+                        <h3 class="title">Leave an opinion</h3>
+                    </div>
+                    <div class="post-form-box">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                                     {% include 'messages.html' %}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-box">
+                                        <input type="text" name="name" placeholder="Full name">
+                                    </div>
+                                </div>
+                              
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <textarea name="body" id="#" cols="30" rows="10" placeholder="Tell us about your opinion…"></textarea>
+                                        <button class="main-btn" type="submit">POST OPINION</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== POST FORM PART ENDS ======-->
+    
+    <!--====== POST COMMENTS PART START ======-->
+
+    <section class="post-comments-area pb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-title">
+                        <h3 class="title">Post Comments</h3>
+                    </div>
+                    <div class="post-comments-list">
+                        {% for i in comments %}
+                        <div class="post-comments-item">
+                            <!-- <div class="thumb">
+                                <img src="assets/images/comments-1.png" alt="comments">
+                            </div> -->
+                            <div class="post">
+                               
+                                <h5 class="title">{{i.name}}</h5>
+                                <p>{{i.body}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                       
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== POST COMMENTS PART ENDS ======-->
+
+    <!--====== ADD PART ENDS ======-->
+
+  
+
+    <!--====== ADD PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+
+   
+
+
+    <!--====== PART START ======-->
+
+  
+
+</body>
+{% endblock content %}

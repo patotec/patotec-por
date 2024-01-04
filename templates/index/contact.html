@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body class="home-1-bg">
+
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== CONTACT INFO PART START ======-->
+
+    <div class="contact-info-area pt-70 pb-90">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-item mt-30">
+                        <h3 class="title">Headquarters</h3>
+                        <span><i class="fas fa-map-marker-alt"></i> LOCATION:</span>
+                        <ul>
+                            <li>12, Warrake Road, Beside Hausa Quarters,</li>
+                            <li>Auchi 312101, Edo State Nigeria.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-item mt-30">
+                        <h3 class="title">Let’s talk</h3>
+                        <span><i class="fas fa-phone"></i> CALL NOW:</span>
+                        <ul>
+                            <li>Call:234705827662</li>
+                            <li>Whatsapp:2348069055018</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-item mt-30">
+                        <h3 class="title">Let’s chat</h3>
+                        <span><i class="fas fa-envelope"></i> EMAIL:</span>
+                        <ul>
+                            <li>auchiblog@gmail.com</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="map-area">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9198.688804852873!2d90.4003856461435!3d23.80073745243844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1605153382124!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--====== CONTACT INFO PART ENDS ======-->
+
+    <!--====== CONTACT PART START ======-->
+
+    <section class="contact-area pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-box">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                                     {% include 'messages.html' %}
+                            <h3 class="title">Let’s work together! <br> Fill out the form.</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-box">
+                                        <input type="text" name="name" placeholder="Full name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-box">
+                                        <input type="text" name="subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-box"> 
+                                        <input type="email" name="email" placeholder="Email address">
+                                    </div>
+                              
+                                <div class="col-lg-12">
+                                    <div class="input-box">
+                                        <textarea name="message" id="#" cols="30" rows="10" placeholder="Tell us about your message…"></textarea>
+                                        <button class="main-btn" type="submit">SEND MESSAGE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-sidebar">
+                        <div class="trending-social">
+                            <div class="section-title">
+                                <h3 class="title">Follow us</h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="facebook.com/@auchiblog">
+                                        <i class="fab fa-facebook-f"></i>
+                                        
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-2" href="twitter.com/@auchi_blog">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-3" href="youtube.com/@auchiblog">
+                                        <i class="fab fa-youtube"></i>
+                                        
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a class="item-4" href="#">
+                                        <i class="fab fa-instagram"></i>
+                                        <span>34,456</span>
+                                        <p>Followers</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-5" href="#">
+                                        <i class="fab fa-vimeo-v"></i>
+                                        <span>34,456</span>
+                                        <p>Followers</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item-6" href="#">
+                                        <i class="fab fa-maxcdn"></i>
+                                        <span>34,456</span>
+                                        <p>Fans</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="post-newsletter mt-30">
+                            <h3 class="title">Newsletter</h3>
+                            <p>Your email address will not be this published. Required fields are News Today.</p>
+                            <form action="#">
+                                <div class="input-box">
+                                    <input type="text" placeholder="Your email address">
+                                    <button type="button">SIGN UP</button>
+                                </div>
+                            </form>
+                            <span>We hate spam as much as you do</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== CONTACT PART ENDS ======-->
+
+    <!--====== ADD PART ENDS ======-->
+
+    <div class="add-area text-center">
+        <a href="#">
+            <img src="/static/logo.jpg" alt="">
+        </a>
+    </div>
+
+    <!--====== ADD PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+
+   
+
+</body>
+
+{% endblock content %}

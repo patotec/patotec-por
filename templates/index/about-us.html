@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body class="home-1-bg">
+
+   
+
+    <!--====== HEADER PART ENDS ======-->
+
+    <!--====== ABOUT AUTHOR PART START ======-->
+{% for i in qs %}
+    <div class="about-author-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-author-content">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Author</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{i.name}}</li>
+                            </ol>
+                        </nav>
+                        <div class="author-content">
+                            <div class="thumb">
+                                <img src="{{i.image.url}}" alt="">
+                            </div>
+                            <h3 class="title">{{i.name}}</h3>
+                            <ul>
+                                <li>News Writer</li>
+                                <li><span>Since: <span>{{i.date}}</span></span></li>
+                            </ul>
+                            <div class="text">
+                                <p>{{i.body}}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!--====== ABOUT AUTHOR PART ENDS ======-->
+
+    <!--====== ABOUT ITEM PART START ======-->
+
+  
+
+
+  
+
+</body>
+
+{% endblock content %}
